@@ -73,16 +73,19 @@
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqU-Jl-5RL" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="36" y="0.0" width="243" height="768"/>
+                                <rect key="frame" x="36" y="0.0" width="272" height="768"/>
                                 <animations/>
                                 <string key="text">I oto na planecie Tip-Topa zapachniało aromatem przedziwnych Tip-Topowych kwiatów.
-– Uff, zakręciło mi się w głowie, ale to, co widzę, doprawdy warte jest największego wysiłku – rzekł
+– Uff, zakręciło mi się w głowie, ale 
+to, co widzę, doprawdy warte jest największego wysiłku – rzekł
 Tip-Top, który malując kolorowe kropki stawał na głowie.
-– Witaj, drogi Tip-Topie! – zawołały Tip-Topowe kwiaty. – Czy nie wiesz o tym, że skoro namalowałeś nas, musisz natychmiast namalować pszczoły, trzmiele i kolorowe motyle?
+– Witaj, drogi Tip-Topie! – zawołały 
+Tip-Topowe kwiaty. – Czy nie wiesz o tym, że skoro namalowałeś nas, musisz natychmiast namalować pszczoły, trzmiele i kolorowe motyle?
 – Nie, nie wiem – przyznał się szczerze Tip-Top. – I nie wiem jak się maluje to,
-o czym mówicie, nigdy w życiu czegoś takiego nie widziałem. I Tip-Top
-z wielkiego zmartwienia siadł nad jeziorkiem, co mu się zdarzało bardzo rzadko, gdyż jako prawdziwy Pan Pędzel – Tip-Top lubił stać prosto jak kreska.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+o czym mówicie, nigdy w życiu 
+czegoś takiego nie widziałem. 
+I Tip-Top z wielkiego zmartwienia siadł nad jeziorkiem, co mu się zdarzało bardzo rzadko, gdyż jako prawdziwy Pan Pędzel – Tip-Top lubił stać prosto jak kreska.</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -100,6 +103,14 @@ z wielkiego zmartwienia siadł nad jeziorkiem, co mu się zdarzało bardzo rzad
                                     <action selector="nextPage" destination="3wh-eS-i8j" eventType="touchUpInside" id="wn9-25-deL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chP-0s-EPL" userLabel="PreviousPageButton">
+                                <rect key="frame" x="957" y="53" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="3wh-eS-i8j" eventType="touchUpInside" id="oLj-R9-njz"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqa-BO-eqD">
                                 <rect key="frame" x="26" y="669" width="262" height="26"/>
                                 <animations/>
@@ -110,9 +121,13 @@ z wielkiego zmartwienia siadł nad jeziorkiem, co mu się zdarzało bardzo rzad
                                     <segue destination="1gF-fQ-qup" kind="presentation" id="IfI-ue-Lwt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCm-FD-Z1n" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCm-FD-Z1n" userLabel="PlayButton">
                                 <rect key="frame" x="37" y="55" width="55" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="iAs-nm-to3"/>
+                                    <constraint firstAttribute="height" constant="50" id="w8U-5p-5GT"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -157,7 +172,13 @@ z wielkiego zmartwienia siadł nad jeziorkiem, co mu się zdarzało bardzo rzad
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZCV-oK-6WE" firstAttribute="top" secondItem="geh-Q2-KxT" secondAttribute="bottom" constant="15" id="1FD-6e-iBa"/>
+                            <constraint firstItem="chP-0s-EPL" firstAttribute="centerY" secondItem="QCm-FD-Z1n" secondAttribute="centerY" id="2je-Ih-KX4"/>
+                            <constraint firstItem="QCm-FD-Z1n" firstAttribute="leading" secondItem="76T-YF-nK3" secondAttribute="leadingMargin" constant="17" id="Hq5-g0-r0s"/>
+                            <constraint firstItem="QCm-FD-Z1n" firstAttribute="top" secondItem="oln-40-Qgr" secondAttribute="bottom" constant="35" id="JPB-Ic-MLh"/>
+                            <constraint firstItem="chP-0s-EPL" firstAttribute="centerX" secondItem="geh-Q2-KxT" secondAttribute="centerX" id="LeQ-HW-AfY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="geh-Q2-KxT" secondAttribute="trailing" constant="3" id="PvE-nz-91n"/>
+                            <constraint firstItem="chP-0s-EPL" firstAttribute="height" secondItem="geh-Q2-KxT" secondAttribute="height" id="uJh-8X-7fD"/>
+                            <constraint firstItem="chP-0s-EPL" firstAttribute="width" secondItem="geh-Q2-KxT" secondAttribute="width" id="uNJ-z1-WNS"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -188,21 +209,27 @@ z wielkiego zmartwienia siadł nad jeziorkiem, co mu się zdarzało bardzo rzad
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1m-Un-OkL" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="254" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="300" height="768"/>
                                 <animations/>
-                                <string key="text">– Las ma rację – zaszumiały Tip-Topowe kwiaty.
-– Chcemy pić, pić, pić! I Tip-Top namalował długą, wijącą się linię strumyka.
-Lecz strumyk zamiast szumieć i bulgotać, zwinął się w spiralę i zasyczał:
-– Ssss... Dziękuję ci, Tip-Topie, żeś o mnie pamiętał. Zdaje się, że jestem niczego sobie wężem. A jaką piękną mozaikę mam z pasków i z kropek.
-– Cieszę się, wężu, że cię namalowałem, chociaż wyobrażałem sobie, że maluję długi i wijący się strumyk.
-– Sstrumyk. Sstrumyk jest niebieski jak niebo nad twoją planetą, miejscami migocący ssrebrem, a pod lasem zielonkawy niczym ssok wyciśśnięty ze śświerkowych igieł – zasyczał wąż.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <string key="text">– Las ma rację – zaszumiały Tip-Topowe kwiaty. – Chcemy pić, pić, pić! 
+I Tip-Top namalował długą, wijącą się linię strumyka. Lecz strumyk zamiast szumieć i bulgotać, zwinął się w spiralę i zasyczał:
+– Ssss... Dziękuję ci, Tip-Topie, żeś o mnie pamiętał. Zdaje się, że jestem niczego sobie wężem. A jaką piękną mozaikę 
+mam z pasków i z kropek.
+– Cieszę się, wężu, że cię namalowałem, chociaż wyobrażałem sobie, że maluję 
+długi i wijący się strumyk.
+– Sstrumyk. Sstrumyk jest niebieski jak niebo nad twoją planetą, miejscami migocący ssrebrem, a pod lasem zielonkawy niczym ssok wyciśśnięty 
+ze śświerkowych igieł – zasyczał wąż.</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oG8-c2-VhL" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oG8-c2-VhL" userLabel="PlayButton">
                                 <rect key="frame" x="38" y="54" width="55" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="TMr-IR-GC6"/>
+                                    <constraint firstAttribute="height" constant="50" id="uqa-5I-fSR"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -233,6 +260,14 @@ Lecz strumyk zamiast szumieć i bulgotać, zwinął się w spiralę i zasyc
                                 </state>
                                 <connections>
                                     <action selector="nextPage" destination="m8w-16-3gL" eventType="touchUpInside" id="lrh-8N-veR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XP4-lJ-LEp" userLabel="PreviousPageButton">
+                                <rect key="frame" x="957" y="52" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="m8w-16-3gL" eventType="touchUpInside" id="gZv-rd-XBi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-jX-7k2">
@@ -271,7 +306,13 @@ Lecz strumyk zamiast szumieć i bulgotać, zwinął się w spiralę i zasyc
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="OPc-OB-C6O" secondAttribute="trailing" constant="3" id="0jp-ES-KND"/>
+                            <constraint firstItem="XP4-lJ-LEp" firstAttribute="width" secondItem="OPc-OB-C6O" secondAttribute="width" id="8xJ-o2-nxD"/>
+                            <constraint firstItem="XP4-lJ-LEp" firstAttribute="centerX" secondItem="OPc-OB-C6O" secondAttribute="centerX" id="L0E-T3-d5l"/>
+                            <constraint firstItem="oG8-c2-VhL" firstAttribute="leading" secondItem="tjS-9F-ruM" secondAttribute="leadingMargin" constant="18" id="NBF-zF-Efz"/>
+                            <constraint firstItem="XP4-lJ-LEp" firstAttribute="height" secondItem="OPc-OB-C6O" secondAttribute="height" id="NNw-dv-iA1"/>
+                            <constraint firstItem="oG8-c2-VhL" firstAttribute="top" secondItem="ZFG-vo-ZCJ" secondAttribute="bottom" constant="34" id="leX-5K-iyU"/>
                             <constraint firstItem="9Z5-bF-17z" firstAttribute="top" secondItem="OPc-OB-C6O" secondAttribute="bottom" constant="15" id="rDt-YT-imu"/>
+                            <constraint firstItem="XP4-lJ-LEp" firstAttribute="centerY" secondItem="oG8-c2-VhL" secondAttribute="centerY" id="xtR-hf-kl5"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -302,26 +343,42 @@ Lecz strumyk zamiast szumieć i bulgotać, zwinął się w spiralę i zasyc
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZD2-Q2-l4m" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="244" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="282" height="768"/>
                                 <animations/>
                                 <string key="text">– Pamiętasz o wszystkich, tylko
-nie o mnie, kochany Tip-Topie – zaszumiał ponownie świerkowy las.  – Jest mi bardzo smutno, gdyż w mych przepaścistych kniejach nie mieszka żaden leśny czworonóg.
+nie o mnie, kochany Tip-Topie – zaszumiał ponownie świerkowy las.
+– Jest mi bardzo smutno, gdyż w mych przepaścistych kniejach nie mieszka żaden leśny czworonóg.
 Tip-Top ponownie zadumał się głęboko
-i zaczął malować leśnego czworonoga. Ażeby zwierzę wyglądało piękniej, Tip- Top ubrał je w piękne złote futro: od głowy do połowy tułowia malując w ciemne pręgi, a resztę, aż po koniuszek ogona, w czarne kropki.
+i zaczął malować leśnego czworonoga. Ażeby zwierzę wyglądało piękniej, Tip- Top ubrał je w piękne złote futro: od 
+głowy do połowy tułowia malując w ciemne pręgi, a resztę, aż po koniuszek ogona, w czarne kropki.
 – Co się dzieje?! – zawołał czworonóg. – Nie przeczę. że jestem pięknym kotem, ale powiedz mi Tip-Topie, co oznaczają
-te paski i kropki? Czy ja jestem tygrysem, czy panterą? A może tygryso-panterą. – Ależ Tip-Topie – zaszumiał świerkowy las. – W świerkowych lasach nie mieszkają pantery. Tygrysy się zdarzają, chociaż bardzo rzadko..</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+te paski i kropki? Czy ja jestem tygrysem, czy panterą? A może tygryso-panterą. 
+– Ależ Tip-Topie – zaszumiał świerkowy las. – W świerkowych lasach nie mieszkają pantery. Tygrysy się 
+zdarzają, chociaż bardzo rzadko..</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hV-kV-evO" userLabel="NextPageButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hV-kV-evO" userLabel="NextPageButton">
                                 <rect key="frame" x="961" y="699" width="44" height="54"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="U9Y-A9-Rc4"/>
+                                    <constraint firstAttribute="height" constant="54" id="woM-Rl-V7n"/>
+                                </constraints>
                                 <state key="normal" image="NextPage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="nextPage" destination="H4x-SJ-cI0" eventType="touchUpInside" id="pKr-mg-0qC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgZ-4y-C0I" userLabel="PreviousPageButton">
+                                <rect key="frame" x="961" y="55" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="H4x-SJ-cI0" eventType="touchUpInside" id="8wE-ht-XWR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51F-SK-U7s">
@@ -334,9 +391,13 @@ te paski i kropki? Czy ja jestem tygrysem, czy panterą? A może tygryso-pante
                                     <segue destination="1gF-fQ-qup" kind="presentation" id="s5F-7l-VYd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHk-yN-7zD" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHk-yN-7zD" userLabel="PlayButton">
                                 <rect key="frame" x="38" y="57" width="54" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="K0Y-xS-j2D"/>
+                                    <constraint firstAttribute="height" constant="50" id="OZQ-5g-D5Z"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -379,6 +440,16 @@ te paski i kropki? Czy ja jestem tygrysem, czy panterą? A może tygryso-pante
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RgZ-4y-C0I" firstAttribute="centerX" secondItem="1hV-kV-evO" secondAttribute="centerX" id="7cS-sa-yKd"/>
+                            <constraint firstItem="ETt-XW-3pE" firstAttribute="top" secondItem="1hV-kV-evO" secondAttribute="bottom" constant="15" id="7uT-GG-UTv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1hV-kV-evO" secondAttribute="trailing" constant="-1" id="CVB-wd-H35"/>
+                            <constraint firstItem="RgZ-4y-C0I" firstAttribute="height" secondItem="1hV-kV-evO" secondAttribute="height" id="ESk-yh-j2l"/>
+                            <constraint firstItem="lHk-yN-7zD" firstAttribute="leading" secondItem="RJy-EA-6E8" secondAttribute="leadingMargin" constant="18" id="QdL-KL-pPp"/>
+                            <constraint firstItem="RgZ-4y-C0I" firstAttribute="width" secondItem="1hV-kV-evO" secondAttribute="width" id="ZrL-BP-etA"/>
+                            <constraint firstItem="lHk-yN-7zD" firstAttribute="top" secondItem="36X-Dz-9OT" secondAttribute="bottom" constant="37" id="nRV-SR-vCM"/>
+                            <constraint firstItem="RgZ-4y-C0I" firstAttribute="centerY" secondItem="lHk-yN-7zD" secondAttribute="centerY" id="y4h-tf-6q5"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -408,26 +479,44 @@ te paski i kropki? Czy ja jestem tygrysem, czy panterą? A może tygryso-pante
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzL-HA-Jms" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="256" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="290" height="768"/>
                                 <animations/>
-                                <string key="text">Tip-Top, zawstydzony głęboko przemalował całego kota w ciemne pręgi i tygrys, przeciągając się leniwie,
+                                <string key="text">Tip-Top, zawstydzony głęboko przemalował całego kota w ciemne pręgi 
+i tygrys, przeciągając się leniwie,
 ruszył w gęstwinę świerkowego lasu.
-– Nigdy bym nie przypuszczał, że czworonogi, które są kotami, nie mogą być jednocześnie w kropki i w paski – powiedział do swych kwiatów Tip-Top.
-Teraz w ogóle boję się malować, chociaż bardzo, bardzo chciałbym zaprosić na swą planetę jak najwięcej wszelakich stworzeń.
-– Nie bój się Tip-Topie. Nie bój się - odparły Tip-Topowe kwiaty – są w Krainie Tam stworzenia równie fantastyczne, barwne; i w kropki, i w paski, i w kółka jak my – twoje kwiaty, jak motyle, jak ptaki. Te stworzenia nazywają się ryby. – Ryby?! – zdziwił się Tip-Top.
+– Nigdy bym nie przypuszczał, że czworonogi, które są kotami, nie mogą 
+być jednocześnie w kropki i w paski – powiedział do swych kwiatów Tip-Top.
+Teraz w ogóle boję się malować, chociaż bardzo, bardzo chciałbym zaprosić na swą planetę jak najwięcej wszelakich 
+stworzeń.
+– Nie bój się Tip-Topie. Nie bój się - odparły Tip-Topowe kwiaty – są w Krainie Tam stworzenia równie fantastyczne, barwne; i w kropki, i w paski, i w kółka 
+jak my – twoje kwiaty, jak motyle, 
+jak ptaki. Te stworzenia nazywają się ryby. 
+– Ryby?! – zdziwił się Tip-Top.
 – Tak – ryby. A najpiękniejsze ryby, jakie tylko można sobie wyobrazić, mieszkają w morzu.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkR-Xe-PaO" userLabel="NextPageButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkR-Xe-PaO" userLabel="NextPageButton">
                                 <rect key="frame" x="961" y="699" width="45" height="54"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="ahK-hq-7RZ"/>
+                                    <constraint firstAttribute="width" constant="45" id="duj-cX-QXJ"/>
+                                </constraints>
                                 <state key="normal" image="NextPage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="nextPage" destination="InS-Vl-GLV" eventType="touchUpInside" id="NQy-D8-wlM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-q6-Icq" userLabel="PreviousPageButton">
+                                <rect key="frame" x="961" y="56" width="45" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="InS-Vl-GLV" eventType="touchUpInside" id="xfC-Sg-2M2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-vX-Inh">
@@ -440,9 +529,13 @@ Teraz w ogóle boję się malować, chociaż bardzo, bardzo chciałbym zapro
                                     <segue destination="1gF-fQ-qup" kind="presentation" id="V1F-pA-ZYh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz9-aj-GKY" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cz9-aj-GKY" userLabel="PlayButton">
                                 <rect key="frame" x="37" y="58" width="54" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="I30-Cg-liE"/>
+                                    <constraint firstAttribute="height" constant="50" id="hf5-98-ZnI"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -485,6 +578,16 @@ Teraz w ogóle boję się malować, chociaż bardzo, bardzo chciałbym zapro
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kOW-Zv-8th" firstAttribute="top" secondItem="fkR-Xe-PaO" secondAttribute="bottom" constant="15" id="99c-Z3-IfP"/>
+                            <constraint firstItem="Bsq-q6-Icq" firstAttribute="width" secondItem="fkR-Xe-PaO" secondAttribute="width" id="Cy3-xd-aRt"/>
+                            <constraint firstItem="Bsq-q6-Icq" firstAttribute="centerY" secondItem="cz9-aj-GKY" secondAttribute="centerY" id="Dam-Tm-cOn"/>
+                            <constraint firstItem="cz9-aj-GKY" firstAttribute="top" secondItem="rHJ-9y-CPx" secondAttribute="bottom" constant="38" id="NWS-Iv-uyR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fkR-Xe-PaO" secondAttribute="trailing" constant="-2" id="ROi-06-DIx"/>
+                            <constraint firstItem="Bsq-q6-Icq" firstAttribute="centerX" secondItem="fkR-Xe-PaO" secondAttribute="centerX" id="cWU-OE-oKN"/>
+                            <constraint firstItem="Bsq-q6-Icq" firstAttribute="height" secondItem="fkR-Xe-PaO" secondAttribute="height" id="nNW-1I-sRJ"/>
+                            <constraint firstItem="cz9-aj-GKY" firstAttribute="leading" secondItem="x9C-ny-ETB" secondAttribute="leadingMargin" constant="17" id="pww-IN-r8v"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -514,12 +617,19 @@ Teraz w ogóle boję się malować, chociaż bardzo, bardzo chciałbym zapro
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya6-6y-ypS" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="256" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="296" height="768"/>
                                 <animations/>
                                 <string key="text">– W morzu? – zdziwił się ponownie Tip- Top, gdyż nie znając ryb, no tym bardziej nie znał morza.
-– Namaluj kochany Tip-Topie, morskie ryby – zaszumiały kwiaty. – Ale najpierw musisz namalować niebieskie morze. Tylko pamiętaj, żebyś nie malował zbyt dużego morza, bo z morza zrobi się ocean i zaleje naszą malutką palnetę. Tip-Top – starannie umoczywszy swą czuprynę w niebieskim jeziorku – namalował tuż koło zielonej łąki małe morze, które nie mogło stać się oceanem. A potem zaczął malować ryby o przedziwnych kształtach, przepysznych barwach, w kropki, w kółka, w kreski, w falujące linie. Każda ryba, gdy tylko Tip-Top ukończył swoją pracę, mówiła:
-– Witaj, Tip-Topie. Jak bardzo stęskniłyśmy się czekając w Krainie Tam na tę chwilę, gdy zaprosisz nas na swą piękną planetę. Witaj, Tip-Topie...</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+– Namaluj kochany Tip-Topie, morskie 
+ryby – zaszumiały kwiaty. – Ale 
+najpierw musisz namalować niebieskie morze. Tylko pamiętaj, żebyś nie malował zbyt dużego morza, bo z morza zrobi się ocean i zaleje naszą malutką palnetę. 
+Tip-Top – starannie umoczywszy swą czuprynę w niebieskim jeziorku – namalował tuż koło zielonej łąki małe morze, które nie mogło stać się oceanem. 
+A potem zaczął malować ryby o przedziwnych kształtach, przepysznych barwach, w kropki, w kółka, w kreski, w falujące linie. Każda ryba, gdy tylko 
+Tip-Top ukończył swoją pracę, mówiła:
+– Witaj, Tip-Topie. Jak bardzo 
+stęskniłyśmy się czekając w Krainie Tam 
+na tę chwilę, gdy zaprosisz nas na swą piękną planetę. Witaj, Tip-Topie...</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -543,9 +653,13 @@ Teraz w ogóle boję się malować, chociaż bardzo, bardzo chciałbym zapro
                                     <action selector="openGallery:" destination="s9d-LI-450" eventType="touchUpInside" id="CfL-AF-j01"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q18-SZ-VEl" userLabel="NextPageButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q18-SZ-VEl" userLabel="NextPageButton">
                                 <rect key="frame" x="961" y="699" width="44" height="54"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="81n-bc-Yev"/>
+                                    <constraint firstAttribute="height" constant="54" id="s8a-uU-jnx"/>
+                                </constraints>
                                 <state key="normal" image="NextPage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -553,9 +667,21 @@ Teraz w ogóle boję się malować, chociaż bardzo, bardzo chciałbym zapro
                                     <action selector="nextPage" destination="s9d-LI-450" eventType="touchUpInside" id="H5T-7X-RLc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYh-HZ-4MT" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3v-gW-PEh" userLabel="PreviousPageButton">
+                                <rect key="frame" x="961" y="56" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="s9d-LI-450" eventType="touchUpInside" id="lVh-EM-0Zw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYh-HZ-4MT" userLabel="PlayButton">
                                 <rect key="frame" x="38" y="58" width="55" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="ESi-13-tk9"/>
+                                    <constraint firstAttribute="height" constant="50" id="IYL-be-Xxu"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -587,6 +713,16 @@ Teraz w ogóle boję się malować, chociaż bardzo, bardzo chciałbym zapro
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f5t-eE-4Nj" firstAttribute="top" secondItem="q18-SZ-VEl" secondAttribute="bottom" constant="15" id="45T-ji-arX"/>
+                            <constraint firstItem="uYh-HZ-4MT" firstAttribute="leading" secondItem="9bn-A7-0we" secondAttribute="leadingMargin" constant="18" id="4rd-LP-Z5k"/>
+                            <constraint firstItem="j3v-gW-PEh" firstAttribute="centerY" secondItem="uYh-HZ-4MT" secondAttribute="centerY" id="BXM-VX-8ml"/>
+                            <constraint firstItem="j3v-gW-PEh" firstAttribute="width" secondItem="q18-SZ-VEl" secondAttribute="width" id="GMb-oX-Yc5"/>
+                            <constraint firstItem="j3v-gW-PEh" firstAttribute="centerX" secondItem="q18-SZ-VEl" secondAttribute="centerX" id="KCI-hL-qLu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q18-SZ-VEl" secondAttribute="trailing" constant="-1" id="T0w-Pi-Xqn"/>
+                            <constraint firstItem="uYh-HZ-4MT" firstAttribute="top" secondItem="59d-qc-wp0" secondAttribute="bottom" constant="38" id="Txo-dI-LVk"/>
+                            <constraint firstItem="j3v-gW-PEh" firstAttribute="height" secondItem="q18-SZ-VEl" secondAttribute="height" id="Zir-OY-5fD"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -616,19 +752,28 @@ Teraz w ogóle boję się malować, chociaż bardzo, bardzo chciałbym zapro
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-Js-clu" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="256" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="291" height="768"/>
                                 <animations/>
-                                <string key="text">I z pluskiem zanurzały się w głębinach Tip-Topowego morza.
+                                <string key="text">I z pluskiem zanurzały się w głębinach 
+Tip-Topowego morza.
 Gdy morze wypełniło się mnóstwem przepięknych ryb, Tip-Top poczuł się tak zmęczony, jak nigdy w życiu. Lecz serce jego przepełnione było radością.
-– No, teraz odpocznijcie sobie, moje drogie rośliny i zwierzęta, mój lesie, moja łąko, strumyku i ty, moje malutkie morze. Zobaczymy się jutro i będziemy dalej zapraszali do nas wszystkich z Krainy Tam. I Tip-Top wspiął się na palce przywołując nad malutką planetę piękną, gwiaździstą noc.
-A kiedy gwiazdy zanuciły mu gwiezdną kołysankę, Tip-Top wyciągnął się jak długi na soczystej trawie, obok swych pięknych kwiatów i usnął, komicznie pogwizdując przez nos: „pssi-puć..., pssi-puć..., pssi-puć...”</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+– No, teraz odpocznijcie sobie, moje drogie rośliny i zwierzęta, mój lesie, moja łąko, strumyku i ty, moje malutkie morze. Zobaczymy się jutro i będziemy dalej zapraszali do nas wszystkich z Krainy 
+Tam. I Tip-Top wspiął się na palce przywołując nad malutką planetę 
+piękną, gwiaździstą noc.
+A kiedy gwiazdy zanuciły mu gwiezdną kołysankę, Tip-Top wyciągnął się jak 
+długi na soczystej trawie, obok swych pięknych kwiatów i usnął, komicznie pogwizdując przez nos: „pssi-puć..., 
+pssi-puć..., pssi-puć...”</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SV1-Cg-ynx" userLabel="NextPageButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SV1-Cg-ynx" userLabel="NextPageButton">
                                 <rect key="frame" x="961" y="699" width="44" height="54"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="CdS-OJ-EQh"/>
+                                    <constraint firstAttribute="height" constant="54" id="beG-Lu-nmV"/>
+                                </constraints>
                                 <state key="normal" image="NextPage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -636,9 +781,18 @@ A kiedy gwiazdy zanuciły mu gwiezdną kołysankę, Tip-Top wyciągnął sie
                                     <action selector="goToFirstPage" destination="zgg-Jh-Rfl" eventType="touchUpInside" id="Nc8-7Q-Z3n"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoD-W7-Dw6" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rs-JP-PDz" userLabel="PreviousPageButton">
+                                <rect key="frame" x="961" y="54" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoD-W7-Dw6" userLabel="PlayButton">
                                 <rect key="frame" x="42" y="56" width="53" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="OCa-E2-zyn"/>
+                                    <constraint firstAttribute="height" constant="50" id="nDf-u0-DlH"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -670,6 +824,16 @@ A kiedy gwiazdy zanuciły mu gwiezdną kołysankę, Tip-Top wyciągnął sie
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UoD-W7-Dw6" firstAttribute="leading" secondItem="CWU-m9-FHU" secondAttribute="leadingMargin" constant="22" id="EwK-TN-zQk"/>
+                            <constraint firstItem="2ol-9K-cTR" firstAttribute="top" secondItem="SV1-Cg-ynx" secondAttribute="bottom" constant="15" id="MKF-cr-82C"/>
+                            <constraint firstItem="5Rs-JP-PDz" firstAttribute="width" secondItem="SV1-Cg-ynx" secondAttribute="width" id="Rz4-NX-7dP"/>
+                            <constraint firstItem="UoD-W7-Dw6" firstAttribute="top" secondItem="lo5-el-bd6" secondAttribute="bottom" constant="36" id="S6s-uJ-YrJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SV1-Cg-ynx" secondAttribute="trailing" constant="-1" id="hO2-hZ-0kV"/>
+                            <constraint firstItem="5Rs-JP-PDz" firstAttribute="centerY" secondItem="UoD-W7-Dw6" secondAttribute="centerY" id="kRf-tm-oUT"/>
+                            <constraint firstItem="5Rs-JP-PDz" firstAttribute="centerX" secondItem="SV1-Cg-ynx" secondAttribute="centerX" id="ttN-9f-DAM"/>
+                            <constraint firstItem="5Rs-JP-PDz" firstAttribute="height" secondItem="SV1-Cg-ynx" secondAttribute="height" id="x3a-ta-JcW"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -698,18 +862,19 @@ A kiedy gwiazdy zanuciły mu gwiezdną kołysankę, Tip-Top wyciągnął sie
                                 <rect key="frame" x="326" y="0.0" width="698" height="768"/>
                                 <animations/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsf-ob-U9U" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="256" height="768"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsf-ob-U9U" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
+                                <rect key="frame" x="34" y="0.0" width="278" height="768"/>
                                 <animations/>
                                 <string key="text">Tip-Top zamoczył swą czuprynę
 w niebieskim jeziorku i namalował długą niebieską linię wijącą się wśród kwiatów. Pod lasem przedłużył ją zieloną farbą.
 – Wsspaniale! – zasyczał wąż. – Tego
-mi brakowało! I rozwijając swe piękne, mozaikowe ciało, wąż z rozkoszą zanurzył się w szumiącym i bulgocącym strumyku. – Drogi Tip-Topie – zaszumiały kwiaty – skoro namalowałeś
+mi brakowało! I rozwijając swe piękne, mozaikowe ciało, wąż z rozkoszą zanurzył się w szumiącym i bulgocącym strumyku. 
+– Drogi Tip-Topie – zaszumiały kwiaty – skoro namalowałeś
 pszczoły, motyle, ptaki, węża wraz ze strumykiem, musisz teraz namalować jakiegoś czworonoga. A wtedy twa planeta stanie się najpiękniejszą wśród wszystkich planet, jakie zamieszkują Panowie Pędzle.
-– Czworonogi? – zdziwił się Tip-Top
+– Czworonogi? – zdziwił się Tip-Top.
 – Cóż to za dziwne stworzenia, które muszą mieć aż tyle nóg?
 – One mają tyle nóg, gdyż muszą szybko biegać, nie mając jak ptaki i motyle skrzydeł. Namaluj, kochany Tip-Topie, konia – poprosiły kwiaty. – Namaluj pędzącego konia.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -735,15 +900,12 @@ pszczoły, motyle, ptaki, węża wraz ze strumykiem, musisz teraz namalować 
                                     <action selector="nextPage" destination="9V6-Fg-Ag6" eventType="touchUpInside" id="efX-eg-c5H"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIh-zH-PoU" userLabel="PlayButton">
-                                <rect key="frame" x="40" y="57" width="52" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ud-0p-sru" userLabel="PreviousPageButton">
+                                <rect key="frame" x="957" y="54" width="44" height="54"/>
                                 <animations/>
-                                <state key="normal" image="PlayButton">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" image="lektorstop"/>
+                                <state key="normal" image="PreviousPage"/>
                                 <connections>
-                                    <action selector="playLectorActionButton" destination="9V6-Fg-Ag6" eventType="touchUpInside" id="Dye-nc-bYc"/>
+                                    <action selector="previosPage" destination="9V6-Fg-Ag6" eventType="touchUpInside" id="jkt-DU-mvj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsN-6r-PZJ">
@@ -776,11 +938,32 @@ pszczoły, motyle, ptaki, węża wraz ze strumykiem, musisz teraz namalować 
                                     <action selector="openGallery:" destination="9V6-Fg-Ag6" eventType="touchUpInside" id="plS-Kb-xCV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIh-zH-PoU" userLabel="PlayButton">
+                                <rect key="frame" x="40" y="57" width="52" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="Fuf-CS-mZ0"/>
+                                    <constraint firstAttribute="height" constant="48" id="iZC-Zt-Rza"/>
+                                </constraints>
+                                <state key="normal" image="PlayButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="lektorstop"/>
+                                <connections>
+                                    <action selector="playLectorActionButton" destination="9V6-Fg-Ag6" eventType="touchUpInside" id="Dye-nc-bYc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5ud-0p-sru" firstAttribute="width" secondItem="Z0q-e7-b9m" secondAttribute="width" id="5jb-Gw-1hj"/>
+                            <constraint firstItem="5ud-0p-sru" firstAttribute="height" secondItem="Z0q-e7-b9m" secondAttribute="height" id="HsP-IH-bco"/>
+                            <constraint firstItem="OIh-zH-PoU" firstAttribute="leading" secondItem="fhE-PW-M1F" secondAttribute="leadingMargin" constant="20" id="I1Q-Qr-5i9"/>
+                            <constraint firstItem="5ud-0p-sru" firstAttribute="centerY" secondItem="OIh-zH-PoU" secondAttribute="centerY" id="KZD-t6-lA2"/>
+                            <constraint firstItem="OIh-zH-PoU" firstAttribute="top" secondItem="FQB-U1-QBe" secondAttribute="bottom" constant="37" id="Rlj-AG-06l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Z0q-e7-b9m" secondAttribute="trailing" constant="3" id="S33-Uc-OjG"/>
+                            <constraint firstItem="5ud-0p-sru" firstAttribute="centerX" secondItem="Z0q-e7-b9m" secondAttribute="centerX" id="VRF-Mv-efE"/>
                             <constraint firstItem="bvs-Qg-rv6" firstAttribute="top" secondItem="Z0q-e7-b9m" secondAttribute="bottom" constant="15" id="bRN-jN-oF9"/>
                         </constraints>
                     </view>
@@ -812,26 +995,41 @@ pszczoły, motyle, ptaki, węża wraz ze strumykiem, musisz teraz namalować 
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofJ-xX-xfm" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="253" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="272" height="768"/>
                                 <animations/>
-                                <string key="text">Tip-Top zadumał się głęboko i widocznie w czasie zadumy spłynęło nań natchnienie z Krainy Tam, bo za chwilę po Tip-Topowej planecie pędził zgrabny konik. A ujrzawszy piękne Tip-Topowe kwiaty, zarył kopytem i skubnął pierwszy z brzegu kwiat.
+                                <string key="text">Tip-Top zadumał się głęboko i widocznie w czasie zadumy spłynęło nań natchnienie z Krainy Tam, bo za chwilę po Tip-Topowej planecie pędził zgrabny konik. A ujrzawszy piękne Tip-Topowe kwiaty, zarył kopytem i skubnął 
+pierwszy z brzegu kwiat.
 – Zamaluj go, Tip-Topie! Natychmiast go zamaluj! – zawołały przerażone kwiaty. Tip-Top umoczył swą czuprynę w farbie
 i zaczął przekreślać konia czarnymi pasami.
 – Hej! – zawołał konik. – Hej, cóż się dzieje? Czuję, że staję się zebrą!
-I z wielkiego zdziwienia konik, który stał się najprawdziwszą zebrą, przestał skubać kwiaty.
+I z wielkiego zdziwienia konik, który 
+stał się najprawdziwszą zebrą, 
+przestał skubać kwiaty.
 – Och, Tip-Topie – lamentowały Tip- Topowe kwiaty – zebra również jest roślinożerna. Ratuj nas Tip-Topie.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fm-eW-YP4" userLabel="NextPageButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fm-eW-YP4" userLabel="NextPageButton">
                                 <rect key="frame" x="961" y="699" width="44" height="54"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Fvp-ZZ-kO6"/>
+                                    <constraint firstAttribute="height" constant="54" id="t7i-ll-mMA"/>
+                                </constraints>
                                 <state key="normal" image="NextPage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="nextPage" destination="9A9-B5-K2G" eventType="touchUpInside" id="DVH-el-oXp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-9H-R2e" userLabel="PreviousPageButton">
+                                <rect key="frame" x="961" y="52" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="9A9-B5-K2G" eventType="touchUpInside" id="Bpp-5D-Cwy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-HD-Lzm">
@@ -844,9 +1042,13 @@ I z wielkiego zdziwienia konik, który stał się najprawdziwszą zebrą, pr
                                     <segue destination="1gF-fQ-qup" kind="presentation" id="pbP-Aa-V3i"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUA-2g-qBu" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUA-2g-qBu" userLabel="PlayButton">
                                 <rect key="frame" x="39" y="52" width="59" height="54"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="SZg-JX-hEf"/>
+                                    <constraint firstAttribute="height" constant="54" id="mP7-HF-NGz"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -878,6 +1080,16 @@ I z wielkiego zdziwienia konik, który stał się najprawdziwszą zebrą, pr
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bnW-9H-R2e" firstAttribute="centerY" secondItem="MUA-2g-qBu" secondAttribute="centerY" id="2z4-yO-Eba"/>
+                            <constraint firstItem="bnW-9H-R2e" firstAttribute="width" secondItem="4Fm-eW-YP4" secondAttribute="width" id="Jze-Hu-0BU"/>
+                            <constraint firstItem="bnW-9H-R2e" firstAttribute="height" secondItem="4Fm-eW-YP4" secondAttribute="height" id="OYn-gL-IJu"/>
+                            <constraint firstItem="MUA-2g-qBu" firstAttribute="leading" secondItem="WN3-Nb-tDz" secondAttribute="leadingMargin" constant="19" id="UIv-Zb-wbJ"/>
+                            <constraint firstItem="339-Kb-GlX" firstAttribute="top" secondItem="4Fm-eW-YP4" secondAttribute="bottom" constant="15" id="Yka-Ta-S5d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Fm-eW-YP4" secondAttribute="trailing" constant="-1" id="hOo-8l-hlk"/>
+                            <constraint firstItem="MUA-2g-qBu" firstAttribute="top" secondItem="TmJ-DQ-IJS" secondAttribute="bottom" constant="32" id="k0I-ae-BTs"/>
+                            <constraint firstItem="bnW-9H-R2e" firstAttribute="centerX" secondItem="4Fm-eW-YP4" secondAttribute="centerX" id="tBa-ZL-8sl"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -907,23 +1119,37 @@ I z wielkiego zdziwienia konik, który stał się najprawdziwszą zebrą, pr
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTq-fd-dUH" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="253" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="280" height="768"/>
                                 <animations/>
-                                <string key="text">Na pewnej malutkiej planecie mieszkał sobie Tip-Top. Był on strasznie chudy, wysoki i miał czuprynę, która mierzyła tyle, ile zazwyczaj mierzą czupryny Tip-Topów. Nie będziemy ukrywali, że Tip-  Top – jak wszyscy jego imiennicy – był nadzwyczaj urodziwym Panem Pędzlem. Tip-Top żył na swej planecie samiuteńki jak palec i strasznie się nudził, chociaż planeta jego – jak wszystkie planety Panów Pędzlów – pyszniła się
-trzystu trzydziestoma trzema jeziorkami pełnymi po brzegi kolorowej farby.
+                                <string key="text">Na pewnej malutkiej planecie mieszkał sobie Tip-Top. Był on strasznie chudy, wysoki i miał czuprynę, która mierzyła tyle, ile zazwyczaj mierzą czupryny 
+Tip-Topów. Nie będziemy ukrywali, że Tip-Top – jak wszyscy jego imiennicy – był nadzwyczaj urodziwym Panem Pędzlem. Tip-Top żył na swej planecie samiuteńki jak palec i strasznie się nudził, chociaż planeta jego – jak wszystkie planety Panów Pędzlów – pyszniła się
+trzystu trzydziestoma trzema 
+jeziorkami pełnymi po brzegi kolorowej farby.
 Tip-Top nigdy w życiu nie zanurzył swojej bujnej czupryny w jeziorku, albowiem na swojej planecie nie widział niczego poza równinną pustynią, kreską horyzontu obiegającą w krąg trzysta trzydzieści trzy jeziorka i złotą kropką malutkiego słońca świecącego dniem i nocą nad głową Tip-Topa.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAg-ua-Ekv" userLabel="NextPageButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAg-ua-Ekv" userLabel="NextPageButton">
                                 <rect key="frame" x="961" y="699" width="44" height="54"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="TV0-ZP-t51"/>
+                                    <constraint firstAttribute="width" constant="44" id="zHg-hi-6N7"/>
+                                </constraints>
                                 <state key="normal" image="NextPage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="nextPage" destination="e2X-ji-G6w" eventType="touchUpInside" id="GN0-ee-fWb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffg-Hn-6RR" userLabel="PreviousPageButton">
+                                <rect key="frame" x="961" y="53" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="e2X-ji-G6w" eventType="touchUpInside" id="Ok4-6b-JiG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQd-xa-ete">
@@ -946,9 +1172,13 @@ Tip-Top nigdy w życiu nie zanurzył swojej bujnej czupryny w jeziorku, albowie
                                     <action selector="openWorldEditor:" destination="e2X-ji-G6w" eventType="touchUpInside" id="2lo-Ku-lGG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WT-Eu-BsL" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WT-Eu-BsL" userLabel="PlayButton">
                                 <rect key="frame" x="40" y="55" width="52" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="k1J-3P-ooF"/>
+                                    <constraint firstAttribute="width" secondItem="1WT-Eu-BsL" secondAttribute="height" multiplier="26:25" id="oYF-Q6-Tyk"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -960,6 +1190,16 @@ Tip-Top nigdy w życiu nie zanurzył swojej bujnej czupryny w jeziorku, albowie
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ffg-Hn-6RR" firstAttribute="centerX" secondItem="zAg-ua-Ekv" secondAttribute="centerX" id="Bi0-Pz-O7v"/>
+                            <constraint firstItem="Ffg-Hn-6RR" firstAttribute="width" secondItem="zAg-ua-Ekv" secondAttribute="width" id="cAx-rr-NZj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zAg-ua-Ekv" secondAttribute="trailing" constant="-1" id="fBV-Ev-hQl"/>
+                            <constraint firstItem="1WT-Eu-BsL" firstAttribute="top" secondItem="5nV-73-4xN" secondAttribute="bottom" constant="35" id="gFB-UL-Kol"/>
+                            <constraint firstItem="qws-cP-0R8" firstAttribute="top" secondItem="zAg-ua-Ekv" secondAttribute="bottom" constant="15" id="gpg-b1-xYk"/>
+                            <constraint firstItem="Ffg-Hn-6RR" firstAttribute="height" secondItem="zAg-ua-Ekv" secondAttribute="height" id="hxm-Bh-kQj"/>
+                            <constraint firstItem="1WT-Eu-BsL" firstAttribute="leading" secondItem="n0L-Tl-2zZ" secondAttribute="leadingMargin" constant="20" id="lW9-rl-bSt"/>
+                            <constraint firstItem="Ffg-Hn-6RR" firstAttribute="centerY" secondItem="1WT-Eu-BsL" secondAttribute="centerY" id="sgK-PW-IMd"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -990,14 +1230,17 @@ Tip-Top nigdy w życiu nie zanurzył swojej bujnej czupryny w jeziorku, albowie
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZa-vM-Bov" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="254" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="285" height="768"/>
                                 <animations/>
-                                <string key="text">– Nie martw się drogi Tip-Topie, skoro umiesz malować kreski i kropki, namalujesz wszyściutko, co fruwa, chodzi i pływa – pocieszały Tip-Topowe kwiaty Tip-Topa. – Pamiętaj tylko, że pszczoły są jak żółte kropki zawieszone na srebrzystych skrzydełkach,
+                                <string key="text">– Nie martw się drogi Tip-Topie, skoro umiesz malować kreski i kropki, namalujesz wszyściutko, co fruwa, 
+chodzi i pływa – pocieszały Tip-Topowe kwiaty Tip-Topa. – Pamiętaj tylko, że pszczoły są jak żółte kropki zawieszone na srebrzystych skrzydełkach,
 trzmiele są podobne choć nieco większe, mają brązowe paski, a motyle... Motyle... Motyle są tak... piękne jak my, drogi Tip-Topie.
-Tip-Top ochoczo wziął się do dzieła i oto nad przedziwnymi kwiatami fruwały złote pszczoły, złocisto-brązowe trzmiele i motyle – o ileż piękniejsze
+Tip-Top ochoczo wziął się do dzieła i oto nad przedziwnymi kwiatami fruwały 
+złote pszczoły, złocisto-brązowe 
+trzmiele i motyle – o ileż piękniejsze
 od najpiękniejszego Tip-Topowego kwiatu. – Witaj, drogi Tip-Topie – wyszeptały omdlewającym głosem motyle. – Jesteśmy ci wdzięczne, żeś zechciał nas namalować. Ale wiedz o tym, że Tam jesteśmy jeszcze piękniejsze, aniżeli w stanie sobie wyobrazić: ty
 i twoje kwiaty.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1011,9 +1254,13 @@ i twoje kwiaty.</string>
                                     <segue destination="1gF-fQ-qup" kind="presentation" id="125-k8-T4j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZ3-hi-ypv" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZ3-hi-ypv" userLabel="PlayButton">
                                 <rect key="frame" x="39" y="56" width="52" height="49"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="O7i-TA-jlJ"/>
+                                    <constraint firstAttribute="height" constant="49" id="WT7-y0-1tN"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1034,6 +1281,14 @@ i twoje kwiaty.</string>
                                 </state>
                                 <connections>
                                     <action selector="nextPage" destination="50x-ZN-SRP" eventType="touchUpInside" id="wn7-Rx-fkz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTW-Zy-T2t" userLabel="PreviousPageButton">
+                                <rect key="frame" x="957" y="54" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="50x-ZN-SRP" eventType="touchUpInside" id="Qq5-QY-bQO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pea-Ha-MWO">
@@ -1071,8 +1326,14 @@ i twoje kwiaty.</string>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uTW-Zy-T2t" firstAttribute="width" secondItem="YAK-bi-XzN" secondAttribute="width" id="4ib-CF-OVq"/>
+                            <constraint firstItem="uTW-Zy-T2t" firstAttribute="height" secondItem="YAK-bi-XzN" secondAttribute="height" id="9rY-en-BKV"/>
+                            <constraint firstItem="uTW-Zy-T2t" firstAttribute="centerX" secondItem="YAK-bi-XzN" secondAttribute="centerX" id="A6i-fe-AvH"/>
+                            <constraint firstItem="SZ3-hi-ypv" firstAttribute="top" secondItem="tdm-lh-dne" secondAttribute="bottom" constant="36" id="Mk2-gh-avA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YAK-bi-XzN" secondAttribute="trailing" constant="3" id="N5Y-Y9-6c3"/>
+                            <constraint firstItem="uTW-Zy-T2t" firstAttribute="centerY" secondItem="SZ3-hi-ypv" secondAttribute="centerY" id="PBe-Bs-5Be"/>
                             <constraint firstItem="ezU-gt-zzW" firstAttribute="top" secondItem="YAK-bi-XzN" secondAttribute="bottom" constant="15" id="Upj-L7-ru5"/>
+                            <constraint firstItem="SZ3-hi-ypv" firstAttribute="leading" secondItem="krm-xh-Udj" secondAttribute="leadingMargin" constant="19" id="dJO-lh-XAH"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1103,19 +1364,26 @@ i twoje kwiaty.</string>
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP5-8h-07t" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="250" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="287" height="768"/>
                                 <animations/>
-                                <string key="text">– Gdzie jest to Tam? – zdziwił się Tip-Top, który, jak wiadomo, nie był nigdzie poza swoją planetą. – Kraina Tam jest bardzo, bardzo daleko... – odparły motyle.
+                                <string key="text">– Gdzie jest to Tam? – zdziwił się Tip-Top, który, jak wiadomo, nie był nigdzie poza swoją planetą. 
+– Kraina Tam jest bardzo, bardzo daleko... – odparły motyle.
 – Nie słuchaj tych niewdzięczników – zaszumiały Tip-Topowe kwiaty. – Maluj dalej. Maluj dalej, a wtedy... Zobaczysz, jak wygląda Kraina Tam. Tylko maluj dalej...
-– Witamy cię, kochany Tip-Topie – zabrzęczały pszczoły i trzmiele, zajęte zbieraniem nektaru z przepięknych Tip- Topowych kwiatów. – Czy nie wiesz o tym, że skoro namalowałeś tak wiele, musisz również namalować ptaki, bez których niebo jest puste i smutne?
-– Nie wiem – przyznał się po raz drugi Tip-Top. – Ptaki mają pióra tak piękne jak płatki kwiatów, skrzydła, dzioby, którymi wygwizdują wesołe melodie – wyjaśniły pszczoły wracając do swej pracy.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+– Witamy cię, kochany Tip-Topie – zabrzęczały pszczoły i trzmiele, zajęte zbieraniem nektaru z przepięknych Tip- Topowych kwiatów. – Czy nie wiesz o 
+tym, że skoro namalowałeś tak wiele, musisz również namalować ptaki, bez których niebo jest puste i smutne?
+– Nie wiem – przyznał się po raz drugi Tip-Top. 
+– Ptaki mają pióra tak piękne jak płatki kwiatów, skrzydła, dzioby, którymi wygwizdują wesołe melodie – wyjaśniły pszczoły wracając do swej pracy.</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfa-ZV-Y3B" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfa-ZV-Y3B" userLabel="PlayButton">
                                 <rect key="frame" x="38" y="54" width="55" height="51"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="rLW-Qh-8fO"/>
+                                    <constraint firstAttribute="width" constant="55" id="ztL-hH-nxs"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1136,6 +1404,14 @@ i twoje kwiaty.</string>
                                 </state>
                                 <connections>
                                     <action selector="nextPage" destination="WSZ-Km-nO0" eventType="touchUpInside" id="ryL-Mk-MTC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-5l-f2n" userLabel="PreviousPageButton">
+                                <rect key="frame" x="957" y="53" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="WSZ-Km-nO0" eventType="touchUpInside" id="hpJ-bE-qG5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOv-iz-1zc">
@@ -1183,8 +1459,14 @@ i twoje kwiaty.</string>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="X3F-5l-f2n" firstAttribute="centerY" secondItem="rfa-ZV-Y3B" secondAttribute="centerY" id="DSE-KL-Sjq"/>
+                            <constraint firstItem="X3F-5l-f2n" firstAttribute="centerX" secondItem="flB-O7-4gK" secondAttribute="centerX" id="FzK-Lb-Dbl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="flB-O7-4gK" secondAttribute="trailing" constant="3" id="HQc-s2-rZ5"/>
+                            <constraint firstItem="rfa-ZV-Y3B" firstAttribute="leading" secondItem="oYq-Dw-rBx" secondAttribute="leadingMargin" constant="18" id="Pp8-jY-Bsx"/>
+                            <constraint firstItem="X3F-5l-f2n" firstAttribute="width" secondItem="flB-O7-4gK" secondAttribute="width" id="fI2-tP-kUa"/>
                             <constraint firstItem="4Ek-Iq-LnS" firstAttribute="top" secondItem="flB-O7-4gK" secondAttribute="bottom" constant="15" id="hL7-7O-Von"/>
+                            <constraint firstItem="rfa-ZV-Y3B" firstAttribute="top" secondItem="rWy-ep-d40" secondAttribute="bottom" constant="34" id="nZ5-XT-xg6"/>
+                            <constraint firstItem="X3F-5l-f2n" firstAttribute="height" secondItem="flB-O7-4gK" secondAttribute="height" id="tq0-c8-JYK"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1215,16 +1497,17 @@ i twoje kwiaty.</string>
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nja-2u-HyP" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="254" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="277" height="768"/>
                                 <animations/>
                                 <string key="text">I Tip-Top namalował dużo dziwnych, kolorowych ptaków zawieszonych
-na niebie malutkiej planety. A gdy przypomniał sobie, że ptaki śpiewają, namalował ptaszka z rozwartym dziobem. Ostatni ptaszek okazał się szary jak grudka gruntu, gdyż Tip-Topowi pomieszały się farby. – Nie, nie. Nie ruszaj mnie, jestem skowronkiem! – zawołał szary ptaszek, gdy Tip-Top sięgnął po kolorową farbę.
+na niebie malutkiej planety. A gdy przypomniał sobie, że ptaki śpiewają, namalował ptaszka z rozwartym dziobem. Ostatni ptaszek okazał się szary jak grudka gruntu, gdyż Tip-Topowi pomieszały się farby. 
+– Nie, nie. Nie ruszaj mnie, jestem skowronkiem! – zawołał szary ptaszek, gdy Tip-Top sięgnął po kolorową farbę.
 Skowronek zaczął śpiewać tak pięknie, że Tip-Top zapomniał, że jest Panem Pędzlem, który musi malować, aby ujrzeć, jak wygląda Kraina Tam.
 Wówczas zaszumiał świerkowy las:
 – Ach, Tip-Topie, Tip-Topie o wspaniałej czuprynie! Dlaczego zapomniałeś
 o mnie? Namalowałeś mnie tak wielkim
 i zielonym, ale wiedz o tym, że bez długiego, wijącego się strumyka niedługo mi szumieć i zielenić się.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1252,9 +1535,21 @@ i zielonym, ale wiedz o tym, że bez długiego, wijącego się strumyka nied�
                                     <action selector="nextPage" destination="Wa9-RZ-XUT" eventType="touchUpInside" id="GeC-d8-xlz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nG-Nl-T1T" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otu-JO-f9I" userLabel="PreviousPageButton">
+                                <rect key="frame" x="957" y="54" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="Wa9-RZ-XUT" eventType="touchUpInside" id="AP6-MK-r3b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nG-Nl-T1T" userLabel="PlayButton">
                                 <rect key="frame" x="37" y="56" width="54" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="2E4-VT-6x6"/>
+                                    <constraint firstAttribute="height" constant="50" id="sbW-UV-tSs"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1298,8 +1593,14 @@ i zielonym, ale wiedz o tym, że bez długiego, wijącego się strumyka nied�
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8nG-Nl-T1T" firstAttribute="leading" secondItem="Cgt-ki-DB3" secondAttribute="leadingMargin" constant="17" id="8EL-l3-gGg"/>
                             <constraint firstItem="gux-8v-VNl" firstAttribute="top" secondItem="hHh-W7-cou" secondAttribute="bottom" constant="15" id="ARr-zI-isV"/>
+                            <constraint firstItem="8nG-Nl-T1T" firstAttribute="top" secondItem="7Pk-jH-8QM" secondAttribute="bottom" constant="36" id="JZ0-8D-AOx"/>
+                            <constraint firstItem="otu-JO-f9I" firstAttribute="centerX" secondItem="hHh-W7-cou" secondAttribute="centerX" id="Z6N-qu-kFh"/>
+                            <constraint firstItem="otu-JO-f9I" firstAttribute="width" secondItem="hHh-W7-cou" secondAttribute="width" id="a5E-Bj-vcc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hHh-W7-cou" secondAttribute="trailing" constant="3" id="eaB-US-0jJ"/>
+                            <constraint firstItem="otu-JO-f9I" firstAttribute="height" secondItem="hHh-W7-cou" secondAttribute="height" id="v02-Gh-ZEt"/>
+                            <constraint firstItem="otu-JO-f9I" firstAttribute="centerY" secondItem="8nG-Nl-T1T" secondAttribute="centerY" id="vXz-pF-KbY"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1330,15 +1631,15 @@ i zielonym, ale wiedz o tym, że bez długiego, wijącego się strumyka nied�
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bih-4i-qgb" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="253" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="279" height="768"/>
                                 <animations/>
                                 <string key="text">– Cóż więc mam robić – zapytał Tip-Top przyglądając się zebrze, która wydawała mu się równie piękna jak kwiaty, motyle
 i wszystko, co namalował.
 – Mówiąc szczerą prawdę – rzekła zebra – to najchętniej poskubałabym zieloną trawkę.
 – Namaluj kochany Tip-Topie, dużo, dużo, dużo zielonej trawy! Pamiętaj, że trawę trzeba malować malutkimi kreseczkami! – zawołały kwiaty.
-Tip-Top raźno wziął się do dzieła i za moment pasiasta zebra pasła się na zielonej łące. „Uff, zmęczyłem się. Zmęczyłem się  niezmiernie, chociaż nie przeczę, że nie ma nic piękniejszego ponad malowanie kresek i kropek” – pomyślał Tip-Top. – „No i kółek, i przepięknie wijących się linii” – dodał również
-w myśli Tip-Top, gdyż malując przepiękne rośliny i zwierzęta, nie wiedzieć kiedy wpadł na pomysł, żeby malować koła, kółka i kapryśnie wijące się linie.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+Tip-Top raźno wziął się do dzieła i za moment pasiasta zebra pasła się na zielonej łące. 
+„Uff, zmęczyłem się. Zmęczyłem się  niezmiernie, chociaż nie przeczę, że nie ma nic piękniejszego ponad malowanie kresek i kropek” – pomyślał Tip-Top. – „No i kółek, i przepięknie wijących się linii” – dodał również w myśli Tip-Top, gdyż malując przepiękne rośliny i zwierzęta, nie wiedzieć kiedy wpadł na pomysł, żeby malować koła, kółka i kapryśnie wijące się linie.</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1352,9 +1653,13 @@ w myśli Tip-Top, gdyż malując przepiękne rośliny i zwierzęta, nie wi
                                     <segue destination="1gF-fQ-qup" kind="presentation" id="y7E-V1-BIp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLg-mE-Hcr" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLg-mE-Hcr" userLabel="PlayButton">
                                 <rect key="frame" x="39" y="57" width="51" height="48"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="az8-co-fiy"/>
+                                    <constraint firstAttribute="width" constant="51" id="iHI-Ih-dxW"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1363,14 +1668,26 @@ w myśli Tip-Top, gdyż malując przepiękne rośliny i zwierzęta, nie wi
                                     <action selector="playLectorActionButton" destination="C2R-JQ-8pu" eventType="touchUpInside" id="hZZ-cf-gb9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12X-U3-Uel" userLabel="NextPageButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12X-U3-Uel" userLabel="NextPageButton">
                                 <rect key="frame" x="961" y="699" width="44" height="54"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="dWb-FB-qdr"/>
+                                    <constraint firstAttribute="height" constant="54" id="znE-m9-Q60"/>
+                                </constraints>
                                 <state key="normal" image="NextPage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="nextPage" destination="C2R-JQ-8pu" eventType="touchUpInside" id="rrT-vr-MgC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfM-ba-nrp" userLabel="PreviousPageButton">
+                                <rect key="frame" x="961" y="54" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="C2R-JQ-8pu" eventType="touchUpInside" id="LUB-Md-SI2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2j-Bd-7WT">
@@ -1396,6 +1713,16 @@ w myśli Tip-Top, gdyż malując przepiękne rośliny i zwierzęta, nie wi
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EfM-ba-nrp" firstAttribute="width" secondItem="12X-U3-Uel" secondAttribute="width" id="Ca0-pf-KZs"/>
+                            <constraint firstItem="EfM-ba-nrp" firstAttribute="centerY" secondItem="iLg-mE-Hcr" secondAttribute="centerY" id="DjM-ga-oeb"/>
+                            <constraint firstItem="EfM-ba-nrp" firstAttribute="height" secondItem="12X-U3-Uel" secondAttribute="height" id="EHd-oI-ZOt"/>
+                            <constraint firstItem="EfM-ba-nrp" firstAttribute="centerX" secondItem="12X-U3-Uel" secondAttribute="centerX" id="EPs-qC-nC9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="12X-U3-Uel" secondAttribute="trailing" constant="-1" id="Hve-6m-9f9"/>
+                            <constraint firstItem="Q0l-fk-Qle" firstAttribute="top" secondItem="12X-U3-Uel" secondAttribute="bottom" constant="15" id="Th9-d4-d0u"/>
+                            <constraint firstItem="iLg-mE-Hcr" firstAttribute="leading" secondItem="aeR-sd-91s" secondAttribute="leadingMargin" constant="19" id="c26-yk-cLD"/>
+                            <constraint firstItem="iLg-mE-Hcr" firstAttribute="top" secondItem="wN4-Ts-X64" secondAttribute="bottom" constant="37" id="lf3-1K-0cp"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -1425,13 +1752,21 @@ w myśli Tip-Top, gdyż malując przepiękne rośliny i zwierzęta, nie wi
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3le-Fp-9xr" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="256" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="292" height="768"/>
                                 <animations/>
-                                <string key="text">„Cóż może być nudniejszego od malowania kresek lub kropek?” – myślał Tip-Top, nie bacząc na to, że był najprawdziwszym Panem Pędzlem. Tak mijały lata.
-Ale któż może sobie wyobrazić pędzel, który nie zechciałby wreszcie zanurzyć swej czupryny w bajecznie kolorowej farbie? „Niech się stanie, co ma się stać. Namaluję tę złotą kropkę. Może wreszcie przestanę się nudzić” – pomyślał Tip-Top. I zanurzywszy głowę w najbliższym jeziorku, wspiął
-się na palce i na niebie swej malutkiej planety postawił najpierw jedną, a potem trzysta trzydzieści trzy malutkie, złote kropki.
-Natychmiast zapadła noc, pierwsza noc na planecie Tip-Topa, a niebo rozjarzyło się złotymi gwiazdkami,które mrugały jedna do drugiej, wołając: – Popatrzcie, jaki ten Tip-Top jest wspaniały, namalował najprawdziwszą noc!</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <string key="text">„Cóż może być nudniejszego od malowania kresek lub kropek?” – myślał Tip-Top, nie bacząc na to, że był najprawdziwszym Panem Pędzlem. 
+Tak mijały lata. Ale któż może sobie wyobrazić pędzel, który nie zechciałby wreszcie zanurzyć swej czupryny w bajecznie kolorowej farbie? 
+„Niech się stanie, co ma się
+stać. Namaluję tę złotą kropkę. Może wreszcie przestanę się nudzić” – 
+pomyślał Tip-Top. 
+I zanurzywszy głowę w najbliższym jeziorku, wspiął  się na palce i na niebie swej malutkiej planety postawił najpierw jedną, a potem trzysta trzydzieści trzy malutkie, złote kropki.
+Natychmiast zapadła noc, pierwsza noc 
+na planecie Tip-Topa, a niebo rozjarzyło 
+się złotymi gwiazdkami,które mrugały 
+jedna do drugiej, wołając: – Popatrzcie, 
+jaki ten Tip-Top jest wspaniały, 
+namalował najprawdziwszą noc!</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1441,12 +1776,22 @@ Natychmiast zapadła noc, pierwsza noc na planecie Tip-Topa, a niebo rozjarzyło
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="fBe-AI-g3N"/>
                                     <constraint firstAttribute="width" constant="44" id="fMR-7D-Qvj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="gA6-Ma-OcM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="rfc-6u-SWS"/>
                                 </constraints>
                                 <state key="normal" image="NextPage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="nextPage" destination="ius-rD-Ahd" eventType="touchUpInside" id="RXt-dU-QzF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9X3-8w-d25" userLabel="PreviousPageButton">
+                                <rect key="frame" x="957" y="54" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="ius-rD-Ahd" eventType="touchUpInside" id="qHS-2S-HTe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyj-Ab-f3v">
@@ -1459,9 +1804,13 @@ Natychmiast zapadła noc, pierwsza noc na planecie Tip-Topa, a niebo rozjarzyło
                                     <segue destination="1gF-fQ-qup" kind="presentation" id="EcE-Gu-fVK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeA-Hg-ms7" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeA-Hg-ms7" userLabel="PlayButton">
                                 <rect key="frame" x="37" y="57" width="54" height="48"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="rXy-lk-10p"/>
+                                    <constraint firstAttribute="height" constant="48" id="uEl-AV-dVd"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1505,8 +1854,14 @@ Natychmiast zapadła noc, pierwsza noc na planecie Tip-Topa, a niebo rozjarzyło
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9X3-8w-d25" firstAttribute="centerX" secondItem="din-xx-JUY" secondAttribute="centerX" id="CeP-vl-OZk"/>
+                            <constraint firstItem="9X3-8w-d25" firstAttribute="width" secondItem="din-xx-JUY" secondAttribute="width" id="IwH-ca-xyp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="din-xx-JUY" secondAttribute="trailing" constant="3" id="JEZ-d6-Gg4"/>
+                            <constraint firstItem="9X3-8w-d25" firstAttribute="centerY" secondItem="TeA-Hg-ms7" secondAttribute="centerY" id="NxB-o3-5Xh"/>
                             <constraint firstItem="CfR-C2-lmg" firstAttribute="top" secondItem="din-xx-JUY" secondAttribute="bottom" constant="15" id="QBk-8d-WWx"/>
+                            <constraint firstItem="TeA-Hg-ms7" firstAttribute="leading" secondItem="6Hi-nU-MlB" secondAttribute="leadingMargin" constant="17" id="TfZ-YX-ecd"/>
+                            <constraint firstItem="9X3-8w-d25" firstAttribute="height" secondItem="din-xx-JUY" secondAttribute="height" id="ZEY-43-5Xt"/>
+                            <constraint firstItem="TeA-Hg-ms7" firstAttribute="top" secondItem="L2c-Vh-Yq6" secondAttribute="bottom" constant="37" id="ajW-NN-xJJ"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1678,7 +2033,7 @@ Natychmiast zapadła noc, pierwsza noc na planecie Tip-Topa, a niebo rozjarzyło
                                                 <rect key="frame" x="0.0" y="22" width="79" height="78"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SJo-aZ-nDu" id="nbY-e8-cU5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="79" height="77.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="79" height="77"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSM-1k-aP9">
@@ -2423,7 +2778,7 @@ Natychmiast zapadła noc, pierwsza noc na planecie Tip-Topa, a niebo rozjarzyło
                                 <animations/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="26" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibc-2h-n4E" customClass="TaleLabel" customModule="Pan_Tip_Top" customModuleProvider="target">
-                                <rect key="frame" x="34" y="0.0" width="256" height="768"/>
+                                <rect key="frame" x="34" y="0.0" width="265" height="768"/>
                                 <animations/>
                                 <string key="text">A potem zaczęły śpiewać gwiezdną kołysankę. I Tip-Top po raz pierwszy w życiu usnął, śmiesznie pogwizdując przez nos: „Pssi-puć, pssi-puć..., pssi-puć...”
 Pan Pędzel obudził się wypoczęty jak nigdy w życiu i w nadzwyczaj dobrym humorze. Szybciutko zanurzył swoją wspaniałą czuprynę w zielonym
@@ -2432,8 +2787,9 @@ Za chwilę na równinie zaszumiał świerkowy las, powiało przyjemnym chłod
 – Cóż to może być? – zdziwił się Tip-Top, który nigdy w życiu nie widział lasu.
 A ponieważ był w dobrym humorze
 – zanurzał swą czuprynę kolejno
-w każdym jeziorku i stawiał pod świerkowym lasem malutkie, kolorowe kropki i, równie malutkie, kolorowe kreski.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+w każdym jeziorku i stawiał pod świerkowym lasem malutkie, kolorowe kropki i, równie malutkie, kolorowe 
+kreski.</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <string key="userLabel">– Popatrzcie, jaki ten Tip-Top jest wspaniały, namalował najprawdziwszą noc! A potem zaczęły śpiewać gwiezdną kołysankę. I Tip-Top po raz pierwszy w życiu usnął, śmiesznie pogwizdując przez nos: „Pssi-puć, pssi-puć..., pssi-puć...” Pan Pędzel obudził się wypoczęty jak nigdy w życiu i w nadzwyczaj dobrym humorze. Szybciutko zanurzył swą wspaniałą czuprynę w zielonym jeziorku i na pustynnej równinie planety zaczął stawiać zielone kreski – pionowo, a potem w jodełkę. Za chwilę na równinie zaszumiał świerkowy las, powiało przyjemnym chłodkiem i żywicznym aromatem. – Cóż to może być? – zdziwił się Tip-Top, który nigdy w życiu nie widział lasu. A ponieważ był w dobrym humorze – zanurzał swą czuprynę kolejno</string>
@@ -2452,6 +2808,14 @@ w każdym jeziorku i stawiał pod świerkowym lasem malutkie, kolorowe kropki 
                                     <action selector="nextPage" destination="Zz6-vw-s5b" eventType="touchUpInside" id="N5y-rW-uWR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdX-Uj-s5S" userLabel="PreviousPegeButton">
+                                <rect key="frame" x="957" y="54" width="44" height="54"/>
+                                <animations/>
+                                <state key="normal" image="PreviousPage"/>
+                                <connections>
+                                    <action selector="previosPage" destination="Zz6-vw-s5b" eventType="touchUpInside" id="CTI-TI-aGs"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2o9-MA-5cM">
                                 <rect key="frame" x="30" y="671" width="256" height="25"/>
                                 <animations/>
@@ -2462,9 +2826,13 @@ w każdym jeziorku i stawiał pod świerkowym lasem malutkie, kolorowe kropki 
                                     <segue destination="1gF-fQ-qup" kind="presentation" id="4BA-3P-vsB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThK-7x-AIR" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThK-7x-AIR" userLabel="PlayButton">
                                 <rect key="frame" x="39" y="56" width="52" height="50"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="FR8-2o-Evo"/>
+                                    <constraint firstAttribute="height" constant="50" id="w9d-iD-I9U"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2509,7 +2877,13 @@ w każdym jeziorku i stawiał pod świerkowym lasem malutkie, kolorowe kropki 
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="zOY-rH-d0A" secondAttribute="trailing" constant="3" id="8eJ-pY-WHG"/>
+                            <constraint firstItem="mdX-Uj-s5S" firstAttribute="width" secondItem="zOY-rH-d0A" secondAttribute="width" id="I47-0l-pDJ"/>
+                            <constraint firstItem="mdX-Uj-s5S" firstAttribute="centerX" secondItem="zOY-rH-d0A" secondAttribute="centerX" id="PBJ-1J-vJg"/>
+                            <constraint firstItem="ThK-7x-AIR" firstAttribute="top" secondItem="xiH-NH-tjT" secondAttribute="bottom" constant="36" id="dud-bc-Q68"/>
+                            <constraint firstItem="mdX-Uj-s5S" firstAttribute="centerY" secondItem="ThK-7x-AIR" secondAttribute="centerY" id="gY5-ER-Jo0"/>
+                            <constraint firstItem="mdX-Uj-s5S" firstAttribute="height" secondItem="zOY-rH-d0A" secondAttribute="height" id="j6s-JN-fYA"/>
                             <constraint firstItem="8J3-fJ-3kp" firstAttribute="top" secondItem="zOY-rH-d0A" secondAttribute="bottom" constant="15" id="o7h-dx-j9C"/>
+                            <constraint firstItem="ThK-7x-AIR" firstAttribute="leading" secondItem="ar1-Nx-4ez" secondAttribute="leadingMargin" constant="19" id="trC-5S-Hb9"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -2530,6 +2904,7 @@ w każdym jeziorku i stawiał pod świerkowym lasem malutkie, kolorowe kropki 
         <image name="NextPage" width="65" height="89"/>
         <image name="Open" width="1025" height="768"/>
         <image name="PlayButton" width="81" height="75"/>
+        <image name="PreviousPage" width="65" height="89"/>
         <image name="SlideUp" width="401" height="41"/>
         <image name="closeDrawing" width="276" height="33"/>
         <image name="galeria" width="60" height="36"/>
@@ -2548,6 +2923,6 @@ w każdym jeziorku i stawiał pod świerkowym lasem malutkie, kolorowe kropki 
         <image name="world" width="79" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IfI-ue-Lwt"/>
+        <segue reference="5lE-KH-GbY"/>
     </inferredMetricsTieBreakers>
 </document>

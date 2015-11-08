@@ -15,9 +15,9 @@ class CILDravingPallete : BorderedView {
     func disableDrawingObjectsWithSender(sender:UIView)
     {
         for view in self.subviews {
-            if view.isMemberOfClass(CILBasicObject) {
-                if view != sender {
-                    (view as! CILBasicObject).enabled = false;
+            if let currentView = view as? CILBasicObject  {
+                if currentView != sender {
+                    currentView.enabled = false;
                 }
             }
         }
@@ -26,8 +26,8 @@ class CILDravingPallete : BorderedView {
     func disableDrawingObjects()
     {
         for view in self.subviews {
-            if view.isMemberOfClass(CILBasicObject) {
-                    (view as! CILBasicObject).enabled = false;
+            if let currentView = view as? CILBasicObject {
+                currentView.enabled = false;
             }
         }
     }
@@ -35,8 +35,8 @@ class CILDravingPallete : BorderedView {
     func disableSuperviewAndSubviewsWithSender(sender:UIView)
     {
         self.disableDrawingObjectsWithSender(sender)
-        if self.superview!.isKindOfClass(CILDravingPallete) {
-            (self.superview as! CILDravingPallete ).disableSuperviewAndSubviewsWithSender(self)
+        if let superV = self.superview! as? CILDravingPallete {
+            superV.disableSuperviewAndSubviewsWithSender(self)
         }
     }
     

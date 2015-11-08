@@ -41,12 +41,12 @@ class WorldEditor: UIViewController , UITableViewDataSource, UITableViewDelegate
         }
         
         for  object in self.drawingCanvas.subviews {
-            if object.isMemberOfClass(CILBasicObject){
-                var angle:CGFloat = (object as! CILBasicObject).rotationAngle
-                (object as! CILBasicObject).transform = CGAffineTransformIdentity
+            if let currentObject = object as? CILBasicObject{
+                var angle:CGFloat = currentObject.rotationAngle
+                currentObject.transform = CGAffineTransformIdentity
                 var frame:CGRect = object.frame
-                (object as! CILBasicObject).transform = CGAffineTransformMakeRotation(angle)
-                objects.append(WorldObject(fileName: self.paleteObjects[object.tag], frame: frame, rotation: angle, alpha: (object as! CILBasicObject).alpha))
+                currentObject.transform = CGAffineTransformMakeRotation(angle)
+                objects.append(WorldObject(fileName: self.paleteObjects[currentObject.tag], frame: frame, rotation: angle, alpha: currentObject.alpha))
             }
         }
         NSKeyedArchiver.archiveRootObject(objects, toFile: Storage.documentsDirectory + "/" + self.fileName!)
@@ -187,8 +187,8 @@ class WorldEditor: UIViewController , UITableViewDataSource, UITableViewDelegate
     //MARK: - UIGestureRecognizerDelagte methods
     
     func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
-        if (gestureRecognizer.view!.isMemberOfClass(PaleteCell) && gestureRecognizer.isMemberOfClass(UIPanGestureRecognizer)){
-            let transformation:CGPoint = (gestureRecognizer as! UIPanGestureRecognizer).translationInView(self.view)
+        if let _ = gestureRecognizer.view! as? PaleteCell, let gesture =  gestureRecognizer as? UIPanGestureRecognizer{
+            let transformation:CGPoint = gesture.translationInView(self.view)
             if transformation.x < 0  || abs(transformation.y) > abs(transformation.x){
                 return false
             }

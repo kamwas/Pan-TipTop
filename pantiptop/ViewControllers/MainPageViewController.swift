@@ -81,9 +81,15 @@ class MainPageViewController: UIPageViewController, PageViewControllerDelegate, 
     
     func goToNextPageWithPageViewController(pageViewController :PageViewController)
     {
-        let nextViewController = self.getViewControllerForNumber(pageViewController.pageNumber+1, isCurrentPage: true)
-        if (nextViewController != nil) {
-            self.setViewControllers([nextViewController!], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        if let nextViewController = self.getViewControllerForNumber(pageViewController.pageNumber+1, isCurrentPage: true) {
+            self.setViewControllers([nextViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         }
+    }
+    
+    func goToPreviousPageWithPageViewController(pageViewController: PageViewController) {
+        if let previousViewController = self.getViewControllerForNumber(pageViewController.pageNumber-1, isCurrentPage: true) {
+            self.setViewControllers([previousViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        }
+        
     }
 }

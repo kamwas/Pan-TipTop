@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 protocol PageViewControllerDelegate{
-
+    func goToPreviousPageWithPageViewController(pageViewController: PageViewController)
     func goToNextPageWithPageViewController(pageViewController: PageViewController)
     func goToFirstPage()
 }
@@ -27,7 +27,11 @@ class PageViewController: UIViewController {
     
     lazy var player:AVAudioPlayer? = {
         do {
-            return try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(String(self.pageNumber), ofType: "mp3")!))
+            if let path = NSBundle.mainBundle().pathForResource(String(self.pageNumber), ofType: "mp3") {
+                return try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path))
+            } else {
+                return try AVAudioPlayer(data: NSData(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(String(self.pageNumber), ofType: "m4a")!))!)
+            }
         }catch{
             return nil
         }
@@ -39,17 +43,21 @@ class PageViewController: UIViewController {
         if self.player != nil {
             if self.player!.playing {
                 self.player!.pause()
-                self.playButton.selected = true
+                self.playButton.selected = false
             } else{
                 self.player!.prepareToPlay()
                 self.player!.play()
-                self.playButton.selected = false
+                self.playButton.selected = true
             }
         }
     }
     
     @IBAction func nextPage () {
         self.delegate?.goToNextPageWithPageViewController(self)
+    }
+    
+    @IBAction func previosPage (){
+        self.delegate?.goToPreviousPageWithPageViewController(self)
     }
     
     @IBAction func openGallery(sender:UIButton){
@@ -88,9 +96,9 @@ class PageViewController: UIViewController {
 
 //MARK: - Seguey functions
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.destinationViewController.isMemberOfClass(DrawingViewController)){
-            (segue.destinationViewController as! DrawingViewController).pageNumber = self.pageNumber
-            (segue.destinationViewController as! DrawingViewController).objectType = self.objectType
+        if let currentSegue = segue.destinationViewController as? DrawingViewController{
+            currentSegue.pageNumber = self.pageNumber
+            currentSegue.objectType = self.objectType
         }
     }
     

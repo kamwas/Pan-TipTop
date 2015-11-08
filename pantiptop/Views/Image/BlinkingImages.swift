@@ -28,8 +28,8 @@ class BlinkingImages: UIView {
             if alpha==0{
                 for imageView in self.subviews
                 {
-                    if imageView.isMemberOfClass(BlinkingImage.self){
-                        (imageView as! BlinkingImage).alpha = alpha
+                    if let img  = imageView as? BlinkingImage {
+                        img.alpha = alpha
                     }
                 }
             }else{
@@ -49,8 +49,8 @@ class BlinkingImages: UIView {
     {
         for imageView in self.subviews
         {
-            if imageView.isMemberOfClass(BlinkingImage.self){
-                (imageView as! BlinkingImage).isBlinkImage = blink
+            if let img = imageView as? BlinkingImage {
+                img.isBlinkImage = blink
             }
         }
     }
